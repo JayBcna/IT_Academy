@@ -1,0 +1,128 @@
+* {
+    margin: 10px auto;
+    padding: 0;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.container {
+    border: 5px solid black;
+    padding: 20px 0;
+    width: 600px;
+    height: 680px;
+}
+
+/* BALL CONTAINER */
+.displace {
+    width: 150px;
+    height: 89%;
+    margin-bottom: -10px;
+    position: relative;
+    /* background-color: rgba(184, 184, 196, 0.204); */
+    transform: rotateX(1deg);
+    animation-name: displace;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-fill-mode: both;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    background: url("basketball.png") no-repeat center/cover;;
+    animation-name: bounce;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.shadow {
+    height: 12px;
+    width: 50px;
+    position: relative;
+    animation-name: shadow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-fill-mode: both;
+    z-index: -1;
+}
+
+@keyframes bounce {
+    0% {
+        left: 0px;
+        top: 100px;
+        transform: rotateY(20deg);
+    }
+
+    97% {
+        transform: rotateX(10deg);
+    }
+
+    99% {
+        transform: rotateX(20deg);
+    }
+
+    100% {
+        left: 0px;
+        top: 95%;
+        transform: rotateX(60deg);
+    }
+}
+
+/* BALL CONTAINER ANIM */
+@keyframes displace {
+    0% {
+        left: 47%;
+        /* top: 100px; */
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: -47%;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        left: 47%;
+        width: 0px;
+        height: 1px;
+        background: radial-gradient(50% 50%, #000 0%, #fff 100%);
+    }
+
+    57% {
+        /* left: 0; */
+        width: 50px;
+        height: 12px;
+        background: radial-gradient(50% 50%, #000 0%, #fff 100%);
+    }
+
+    99% {
+        /* left: 0; */
+        width: 50px;
+        height: 12px;
+        background: radial-gradient(50% 50%, #000 0%, #fff 100%);
+    }
+
+    100% {
+        left: -47%;
+        width: 0px;
+        height: 1px;
+        background: radial-gradient(50% 50%, #000 0%, #fff 100%);
+    }
+}

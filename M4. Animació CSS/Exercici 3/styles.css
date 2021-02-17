@@ -1,0 +1,180 @@
+* {
+    margin: 2px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap:1px;
+    grid-template-areas: "it a ca de my";
+}
+
+h1 {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 4.5vw;
+    color: white;
+    height: 98.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base columns  */
+.white_stripe:nth-child(1) {
+    grid-area: it;
+    background: #244f75;
+    height: 98.5vh;
+}
+
+.white_stripe:nth-child(2) {
+    grid-area: a;
+    background: #60bfbf;
+    height: 98.5vh;
+}
+
+.white_stripe:nth-child(3) {
+    grid-area: ca;
+    background: #8c4b7e;
+    height: 98.5vh;
+}
+
+.white_stripe:nth-child(4) {
+    grid-area: de;
+    background: #f8bb44;
+    height: 98.5vh;
+}
+
+.white_stripe:nth-child(5) {
+    grid-area: my;
+    background: #f24b4b;
+    height: 98.5vh;
+}
+
+/* White stripes */
+.white_stripe:nth-child(1):before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 0%;
+    width: 20%;
+    height: 66vh;
+    background: white;
+    opacity: 0.1;
+    transform: skew(0deg,60deg);
+    transform-origin: center center;
+    z-index: 1;
+    /* animation: "reverse" 0.3s cubic-bezier(0,.67,0,.99); */
+    animation: "reverse" 0.3s cubic-bezier(.31,.25,0,.99);
+}
+
+.white_stripe:nth-child(2):before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 20%;
+    width: 20%;
+    height: 66vh;
+    background: white;
+    opacity: 0.1;
+    transform: skew(0deg,60deg);
+	transform-origin: center center;
+    z-index: 1;
+    animation: "reverse" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(3):before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 40%;
+    width: 20%;
+    height: 66vh;
+    background: white;
+    opacity: 0.1;
+    transform: skew(0deg,60deg);
+	transform-origin: center center;
+    z-index: 1;
+    animation: "reverse" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(4):before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 60%;
+    width: 20%;
+    height: 66vh;
+    background: white;
+    opacity: 0.1;
+    transform: skew(0deg,60deg);
+	transform-origin: center center;
+    z-index: 1;
+    animation: "reverse" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(5):before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 80%;
+    width: 20%;
+    height: 66vh;
+    background: white;
+    opacity: 0.1;
+    transform: skew(0deg,60deg);
+	transform-origin: center center;
+    z-index: 1;
+    animation: "reverse" 0.3s cubic-bezier(0,.67,0,.99);
+}
+
+
+/* action on hover */
+.white_stripe:nth-child(1):hover:before {
+    animation: "expand" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(2):hover:before {
+    animation: "expand" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(3):hover:before {
+    animation: "expand" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(4):hover:before {
+    animation: "expand" 0.3s ease forwards;
+}
+
+.white_stripe:nth-child(5):hover:before {
+    animation: "expand" 0.3s ease forwards;
+}
+
+
+/* Animations */
+@keyframes expand {
+    from {
+        transform: skew(0deg,60deg) scale(1);
+        opacity: 0.1;
+    }
+
+    to {
+        transform: skew(0deg,60deg) scaleY(3);
+        opacity: 0.2;
+    }
+}
+
+@keyframes reverse {
+    from {
+        transform: skew(0deg,60deg) scaleY(3);
+        opacity: 0.2;
+    }
+    
+    to {
+        transform: skew(0deg,60deg) scale(1);
+        opacity: 0.1;
+    }
+}
