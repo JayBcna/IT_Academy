@@ -18,9 +18,15 @@ h1 {
     font-size: 4.5vw;
     color: white;
     height: 98.5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* Base columns  */
@@ -64,11 +70,16 @@ h1 {
     height: 66vh;
     background: white;
     opacity: 0.1;
-    transform: skew(0deg,60deg);
-    transform-origin: center center;
+    -webkit-transform: skew(0deg,60deg);
+        -ms-transform: skew(0deg,60deg);
+            transform: skew(0deg,60deg);
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
     z-index: 1;
     /* animation: "reverse" 0.3s cubic-bezier(0,.67,0,.99); */
-    animation: "reverse" 0.3s cubic-bezier(.31,.25,0,.99);
+    -webkit-animation: "reverse" 0.3s cubic-bezier(.31,.25,0,.99);
+            animation: "reverse" 0.3s cubic-bezier(.31,.25,0,.99);
 }
 
 .white_stripe:nth-child(2):before {
@@ -80,10 +91,15 @@ h1 {
     height: 66vh;
     background: white;
     opacity: 0.1;
-    transform: skew(0deg,60deg);
-	transform-origin: center center;
+    -webkit-transform: skew(0deg,60deg);
+        -ms-transform: skew(0deg,60deg);
+            transform: skew(0deg,60deg);
+	-webkit-transform-origin: center center;
+	    -ms-transform-origin: center center;
+	        transform-origin: center center;
     z-index: 1;
-    animation: "reverse" 0.3s ease forwards;
+    -webkit-animation: "reverse" 0.3s ease forwards;
+            animation: "reverse" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(3):before {
@@ -95,10 +111,15 @@ h1 {
     height: 66vh;
     background: white;
     opacity: 0.1;
-    transform: skew(0deg,60deg);
-	transform-origin: center center;
+    -webkit-transform: skew(0deg,60deg);
+        -ms-transform: skew(0deg,60deg);
+            transform: skew(0deg,60deg);
+	-webkit-transform-origin: center center;
+	    -ms-transform-origin: center center;
+	        transform-origin: center center;
     z-index: 1;
-    animation: "reverse" 0.3s ease forwards;
+    -webkit-animation: "reverse" 0.3s ease forwards;
+            animation: "reverse" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(4):before {
@@ -110,10 +131,15 @@ h1 {
     height: 66vh;
     background: white;
     opacity: 0.1;
-    transform: skew(0deg,60deg);
-	transform-origin: center center;
+    -webkit-transform: skew(0deg,60deg);
+        -ms-transform: skew(0deg,60deg);
+            transform: skew(0deg,60deg);
+	-webkit-transform-origin: center center;
+	    -ms-transform-origin: center center;
+	        transform-origin: center center;
     z-index: 1;
-    animation: "reverse" 0.3s ease forwards;
+    -webkit-animation: "reverse" 0.3s ease forwards;
+            animation: "reverse" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(5):before {
@@ -125,56 +151,97 @@ h1 {
     height: 66vh;
     background: white;
     opacity: 0.1;
-    transform: skew(0deg,60deg);
-	transform-origin: center center;
+    -webkit-transform: skew(0deg,60deg);
+        -ms-transform: skew(0deg,60deg);
+            transform: skew(0deg,60deg);
+	-webkit-transform-origin: center center;
+	    -ms-transform-origin: center center;
+	        transform-origin: center center;
     z-index: 1;
-    animation: "reverse" 0.3s cubic-bezier(0,.67,0,.99);
+    -webkit-animation: "reverse" 0.3s cubic-bezier(0,.67,0,.99);
+            animation: "reverse" 0.3s cubic-bezier(0,.67,0,.99);
 }
 
 
 /* action on hover */
 .white_stripe:nth-child(1):hover:before {
-    animation: "expand" 0.3s ease forwards;
+    -webkit-animation: "expand" 0.3s ease forwards;
+            animation: "expand" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(2):hover:before {
-    animation: "expand" 0.3s ease forwards;
+    -webkit-animation: "expand" 0.3s ease forwards;
+            animation: "expand" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(3):hover:before {
-    animation: "expand" 0.3s ease forwards;
+    -webkit-animation: "expand" 0.3s ease forwards;
+            animation: "expand" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(4):hover:before {
-    animation: "expand" 0.3s ease forwards;
+    -webkit-animation: "expand" 0.3s ease forwards;
+            animation: "expand" 0.3s ease forwards;
 }
 
 .white_stripe:nth-child(5):hover:before {
-    animation: "expand" 0.3s ease forwards;
+    -webkit-animation: "expand" 0.3s ease forwards;
+            animation: "expand" 0.3s ease forwards;
 }
 
 
 /* Animations */
-@keyframes expand {
+@-webkit-keyframes expand {
     from {
-        transform: skew(0deg,60deg) scale(1);
+        -webkit-transform: skew(0deg,60deg) scale(1);
+                transform: skew(0deg,60deg) scale(1);
         opacity: 0.1;
     }
 
     to {
-        transform: skew(0deg,60deg) scaleY(3);
+        -webkit-transform: skew(0deg,60deg) scaleY(3);
+                transform: skew(0deg,60deg) scaleY(3);
         opacity: 0.2;
+    }
+}
+@keyframes expand {
+    from {
+        -webkit-transform: skew(0deg,60deg) scale(1);
+                transform: skew(0deg,60deg) scale(1);
+        opacity: 0.1;
+    }
+
+    to {
+        -webkit-transform: skew(0deg,60deg) scaleY(3);
+                transform: skew(0deg,60deg) scaleY(3);
+        opacity: 0.2;
+    }
+}
+
+@-webkit-keyframes reverse {
+    from {
+        -webkit-transform: skew(0deg,60deg) scaleY(3);
+                transform: skew(0deg,60deg) scaleY(3);
+        opacity: 0.2;
+    }
+    
+    to {
+        -webkit-transform: skew(0deg,60deg) scale(1);
+                transform: skew(0deg,60deg) scale(1);
+        opacity: 0.1;
     }
 }
 
 @keyframes reverse {
     from {
-        transform: skew(0deg,60deg) scaleY(3);
+        -webkit-transform: skew(0deg,60deg) scaleY(3);
+                transform: skew(0deg,60deg) scaleY(3);
         opacity: 0.2;
     }
     
     to {
-        transform: skew(0deg,60deg) scale(1);
+        -webkit-transform: skew(0deg,60deg) scale(1);
+                transform: skew(0deg,60deg) scale(1);
         opacity: 0.1;
     }
 }
