@@ -1,4 +1,3 @@
-/* strips */
 .strips {
 	@include boxSize;
 	overflow: hidden;
@@ -17,7 +16,8 @@
 		justify-content: center;
 		.strip_content {
 			@include flexCentAbs;
-			@include boxSize;
+			height: 100vh;
+			width: 100%;
 			text-align: center;
 		}
 	}
@@ -47,8 +47,8 @@
 }
 
 // variables used to increment the values
-$i: 1;
-$j: 0.5;
+// $i: 1;
+// $j: 0.5;
 // Version with @each
 // @each $key, $value in $colorList {
 //     .strip:nth-child(#{$i}) .strip_content {
@@ -66,7 +66,7 @@ $j: 0.5;
     .strip:nth-child(#{$i}) .strip_content {
         background-color: nth(map-values($colorList), $i);
         animation-name: anim#{$i};
-        animation-duration: nth($time, $i);
+        animation-duration: nth(map-values($time), $i);
         animation-timing-function: ease-out;
     }
 }
