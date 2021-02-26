@@ -1,50 +1,49 @@
 /* strips */
 .strips {
-    @include boxSize;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    cursor: pointer;
-}
-
-.strips .strip {
-    position: relative;
-    width: 19.9vw;
-    margin: 0.1vw;
-    height: 100vh;
-    display: flex;
-    text-align: center;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-}
-.strips .strip .strip_content {
-    @include flexCentAbs;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-}
-
-/* before */
-.strips .strip_content:before {
-    content: "";
-    @include flexCentAbs;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 20vw;
-    height: 100vh;
-    background: white;
-    opacity: 0.05;
-    transform-origin: center center;
-    transform: skew(30deg) scaleY(1) translate(0, 0);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    overflow: hidden;
-}
-
-.strips .strip_content:hover:before {
-    transform: skew(0deg) scaleX(2) translate(0, 0);
-    opacity: 0.2;
+	@include boxSize;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	cursor: pointer;
+	.strip {
+		position: relative;
+		width: 19.9vw;
+		margin: 0.1vw;
+		height: 100vh;
+		display: flex;
+		text-align: center;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		.strip_content {
+			@include flexCentAbs;
+			@include boxSize;
+			text-align: center;
+		}
+	}
+	.strip_content {
+		&:before {
+			content: "";
+			@include flexCentAbs;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 20vw;
+			height: 100vh;
+			background: white;
+			opacity: 0.05;
+			transform-origin: center center;
+			transform: skew(30deg) scaleY(1) translate(0, 0);
+			transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			overflow: hidden;
+		}
+		&:hover {
+			&:before {
+				transform: skew(0deg) scaleX(2) translate(0, 0);
+				opacity: 0.2;
+			}
+		}
+	}
 }
 
 // variables used to increment the values
