@@ -1,0 +1,19 @@
+// Custom.scss
+// VARIABLES
+// Fonts
+$font-family-sans-serif: Helvetica, sans-serif;
+
+// Colors
+$primary: #337ab7;
+$secondary: #5bc0de;
+$success: #5cb85c;
+$info: #f0ad4e;
+$warning: #d9534f;
+$danger: rgb(218, 24, 24);
+$light: rgb(233, 233, 233);
+$dark: rgb(10, 24, 55);
+
+// Option A: Include all of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Add custom code after this

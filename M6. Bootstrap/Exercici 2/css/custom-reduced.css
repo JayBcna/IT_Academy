@@ -1,0 +1,204 @@
+/*!
+ * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #337ab7;
+  --bs-secondary: #5bc0de;
+  --bs-success: #5cb85c;
+  --bs-info: #f0ad4e;
+  --bs-warning: #d9534f;
+  --bs-danger: #da1818;
+  --bs-light: #e9e9e9;
+  --bs-dark: #0a1837;
+  --bs-font-sans-serif: Helvetica, sans-serif;
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2; }
+
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw); }
+  @media (min-width: 1200px) {
+    h1, .h1 {
+      font-size: 2.5rem; } }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+
+code {
+  font-family: var(--bs-font-monospace);
+  font-size: 1em;
+  direction: ltr /* rtl:ignore */;
+  unicode-bidi: bidi-override; }
+
+code {
+  font-size: 0.875em;
+  color: #d63384;
+  word-wrap: break-word; }
+
+img,
+svg {
+  vertical-align: middle; }
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px; } }
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem; } }
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg) /* rtl:ignore */;
+            transform: rotate(360deg) /* rtl:ignore */; } }
+
+@keyframes spinner-grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.mt-2 {
+  margin-top: 0.5rem !important; }
+
+.p-3 {
+  padding: 1rem !important; }
+
+.text-primary {
+  color: #337ab7 !important; }
+
+.text-secondary {
+  color: #5bc0de !important; }
+
+.text-success {
+  color: #5cb85c !important; }
+
+.text-info {
+  color: #f0ad4e !important; }
+
+.text-warning {
+  color: #d9534f !important; }
+
+.text-danger {
+  color: #da1818 !important; }
+
+.text-light {
+  color: #e9e9e9 !important; }
+
+.text-dark {
+  color: #0a1837 !important; }
+
+.text-white {
+  color: #fff !important; }
+
+.text-body {
+  color: #212529 !important; }
+
+.text-muted {
+  color: #6c757d !important; }
+
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5) !important; }
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important; }
+
+.bg-primary {
+  background-color: #337ab7 !important; }
+
+.bg-dark {
+  background-color: #0a1837 !important; }
+
+/* rtl:begin:remove */
+
+/* rtl:end:remove */
+
+/*# sourceMappingURL=custom.css.map */
