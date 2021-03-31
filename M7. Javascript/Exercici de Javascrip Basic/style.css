@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "codystarlight";
+    src: url("fonts/codystar-light-webfont.woff2") format("woff2"), url("fonts/codystar-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "codystarregular";
+    src: url("fonts/codystar-regular-webfont.woff2") format("woff2"), url("fonts/codystar-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.btn {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+/* EXERCICI 8 */
+.calc-container {
+    width: 18.5rem;
+}
+
+.result{
+	height: 100px;
+}
+
+.history{
+	text-align: right;
+	height: 2.3rem;
+    padding-right: 0.25rem;
+    font-family: "codystarregular" !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+#output{
+	text-align: right;
+    padding-right: 0.25rem;
+	height: 60px;
+	font-size: 30px;
+}
+#keyboard{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+}
+.operator, .number, .empty, .decimal {
+	width: 3.5rem;
+	height: 3.5rem;
+	margin: 0.5rem;
+}
+
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+
+/* TOGGLER */
+input {
+    border: none;
+}
+
+#ex-6 {
+    display: none;
+}
+
+#ex-7 {
+    display: none;
+}
+
+#ex-8 {
+    display: none;
+}

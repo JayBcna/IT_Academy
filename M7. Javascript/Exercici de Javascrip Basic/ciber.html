@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici de Javascript Bàsic (M7 )</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body id="body">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- LEFT COL -->
+            <div class="col-sm-5 my-2 d-flex flex-column align-items-md-end">
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-1">Exercici 1</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-2">Exercici 2</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-3">Exercici 3</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-4">Exercici 4</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-5">Exercici 5</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-6"
+                    onclick="toggleHideEx6()">Exercici 6</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-7"
+                    onclick="toggleHideEx7()">Exercici 7</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-8"
+                    onclick="toggleHideEx8()">Exercici 8</button>
+            </div>
+
+            <!-- RIGHT COL -->
+            <div class="col-sm-7 my-2 ">
+
+                <!-- Exercici 6-->
+                <div class="div-1 my-1" id="ex-6">
+                    <h2 id="ex-6-text">Tinc un cotxe de color <span class="badge bg-primary" id="badge">blau</span></h2>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2" id="btn-7"
+                        onclick="changeColor()">Reemplaça el color</button>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2" id="btn-7"
+                        onclick="changeLetter()">Reemplaça el text</button>
+                </div>
+
+                <!-- Exercici 7-->
+                <div class="div-2 my-1" id="ex-7">
+                    <h2>Array d'elements</h2>
+                    <h4 id="arrayElem">'taula', 'cadira', 'ordinador', 'libreta'</h4><br>
+                    <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-7"
+                        onclick="showPosition()">Posicions en array</button><br>
+                    <h4 id="result"></h4>
+                </div>
+
+                <div id="ex-8" class="calc-container border border-dark shadow border-2 rounded py-1">
+                    <div id="calculator" class="calculator">
+                        <div id="result" class="result mx-2 border border-dark border-2">
+                            <div id="history" class="history bg-dark">
+                                <p id="history-value" class="text-white fs-4 my-0"></p>
+                            </div>
+                            <div id="output">
+                                <p id="output-value" class="fs-1"></p>
+                            </div>
+                        </div>
+                        <div id="keyboard">
+                            <button class="operator btn btn-outline-dark border-2" id="clear">C</button>
+                            <button class="operator btn btn-outline-dark border-2" id="backspace">CE</button>
+                            <button class="operator btn btn-outline-dark border-2" id="%">%</button>
+                            <button class="operator btn btn-outline-dark border-2" id="/">&#247;</button>
+                            <button class="number btn btn-outline-dark border-2" id="7">7</button>
+                            <button class="number btn btn-outline-dark border-2" id="8">8</button>
+                            <button class="number btn btn-outline-dark border-2" id="9">9</button>
+                            <button class="operator btn btn-outline-dark border-2" id="*">&times;</button>
+                            <button class="number btn btn-outline-dark border-2" id="4">4</button>
+                            <button class="number btn btn-outline-dark border-2" id="5">5</button>
+                            <button class="number btn btn-outline-dark border-2" id="6">6</button>
+                            <button class="operator btn btn-outline-dark border-2" id="-">-</button>
+                            <button class="number btn btn-outline-dark border-2" id="1">1</button>
+                            <button class="number btn btn-outline-dark border-2" id="2">2</button>
+                            <button class="number btn btn-outline-dark border-2" id="3">3</button>
+                            <button class="operator btn btn-outline-dark border-2" id="+">+</button>
+                                <!-- decimal not working yet -->
+                            <button class="decimal btn btn-outline-dark border-2" id="null">,</button> 
+                            <button class="number btn btn-outline-dark border-2" id="0">0</button>
+                            <div class="empty" id="null"></div>
+                            <button class="operator equal btn btn-outline-dark border-2" id="=">=</button>
+                        </div>
+                    </div>
+                </div>
+
+    <!-- SCRIPTS -->
+    <!-- Custom script with calc functions -->
+    <script src="script.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
