@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+
+<body id="body">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- LEFT COL -->
+            <div class="col-sm-5 my-2 d-flex flex-column align-items-md-end">
+                <!-- Exercicis Nivell 1 -->
+                <h1 class="title mt-3">Nivell 1</h1>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-1"
+                    onclick="showDiv('div1')">Exercici 1</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-2"
+                    onclick="showDiv('div2')">Exercici 2</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-3"
+                    onclick="showDiv('div3')">Exercici 3</button>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-4"
+                    onclick="showDiv('div4')">Exercici 4</button>
+
+                <!-- Exercicis Nivell 2 -->
+                <h1 class="title mt-3">Nivell 2</h1>
+                <button type="button" class="btn btn-outline-dark border-2 my-1" id="btn-5"
+                    onclick="showDiv('div5')">Exercici 5</button>
+            </div>
+
+            <!-- RIGHT COL -->
+            <div class="col-sm-7 my-4 px-5">
+                <!-- Ex-1 -->
+                <div class="my-1 target" id="div1">
+                    <ul>
+                        <li>
+                            <h4>Crea un array amb el teu nom on cada posició correspongui a una lletra.</h4>
+                        </li>
+                        <li>
+                            <h4>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.
+                            </h4>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2" id="btn-ex-1"
+                        onclick="printArray()">Print</button>
+                    <p id="ex-1-result"></p>
+                </div>
+                <!-- Ex-2 -->
+                <div class="my-1 target" id="div2">
+                    <ul>
+                        <li>
+                            <h4>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’.
+                                Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</h4>
+                        </li>
+                        <li>
+                            <h4>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número:
+                                __’
+                            </h4>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2"
+                        onclick="printArray2()">Print</button>
+                    <p id="ex-2-result"></p>
+                </div>
+                <!-- Ex-3 -->
+                <div class="my-1 target" id="div3">
+                    <ul>
+                        <li>
+                            <h4>Emmagatzemar en un Map les lletres de l'array y el nombre de vegades que apareixen.</h4>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2"
+                        onclick="printArray3()">Print</button>
+                    <p id="ex-3-result"></p>
+                </div>
+                <!-- Ex-4 -->
+                <div class="my-1 target" id="div4">
+                    <ul>
+                        <li>
+                            <h4>Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.</h4>
+                        </li>
+                        <li>
+                            <h4>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la
+                                primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució
+                                només tindrem una que es dirà fullName.</h4>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2"
+                        onclick="printArray4()">Print</button>
+                    <p id="ex-4-result"></p>
+                </div>
+                <!-- Ex-5 -->
+                <div class="my-1 target" id="div5">
+                    <ul>
+                        <li>
+                            <h4>Crea una funció que retorni un array amb tots els email (sense repetir) del següent text:</h4>
+                        </li>
+                        <li>
+                            <p class="fs-6" id="emailTxt">'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email'</p>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-dark border-2 my-2"
+                        onclick="printArray5()">Print</button>
+                    <p id="ex-5-result"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
