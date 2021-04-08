@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici de validacions (M7)</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="display-5">Exercici de validacions amb JQueryValidation</h1>
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Form -->
+                <form method="POST" id="myForm" name="myForm">
+                    <!-- Full name ans email -->
+                    <div class="row">
+                        <div class="col-sm-4 mb-3">
+                            <label for="inputName">Nom complet</label>
+                            <input type="text" name="inputName" class="form-control" id="inputName">
+                            <div class="invalid-feedback" id="errorName"></div>
+                        </div>
+                        <div class="col-sm-4 mb-3">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" name="inputEmail" class="form-control" id="inputEmail">
+                            <div class="invalid-feedback" id="errorEmail"></div>
+                        </div>
+                    </div>
+
+                    <!-- Password / Confirm password -->
+                    <div class="row">
+                        <div class="col-sm-4 mb-3">
+                            <label for="inputPassword">Contrasenya</label>
+                            <input type="password" name="inputPassword" class="form-control" id="inputPassword">
+                            <div class="invalid-feedback" id="errorPassword"></div>
+                        </div>
+                        <div class="col-sm-4 mb-3">
+                            <label for="inputPasswordCheck">Repetir contrasenya</label>
+                            <input type="password" name="inputPasswordCheck" class="form-control"
+                                id="inputPasswordCheck">
+                            <div class="invalid-feedback" id="errorPasswordCheck"></div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="row">
+                        <div class="col-sm-8 mb-3">
+                            <label for="inputAddress">Direcció</label>
+                            <input type="text" class="form-control" id="inputAddress" name="inputAddress">
+                            <div class="invalid-feedback" id="errorAddress"></div>
+                        </div>
+                    </div>
+
+                    <!-- State / City / ZipCode -->
+                    <div class="row">
+                        <div class="col-sm-3 mb-3">
+                            <label for="inputProvince">Provincia</label>
+                            <select id="inputProvince" class="form-control" name="inputProvince">
+                                <option selected value=""></option>
+                                <option>Barcelona</option>
+                                <option>Girona</option>
+                                <option>Tarragona</option>
+                                <option>Lleida</option>
+                            </select>
+                            <div class="invalid-feedback" id="errorProvince"></div>
+                        </div>
+                        <div class="col-sm-3 mb-3">
+                            <label for="inputCity">Ciutat</label>
+                            <input type="text" class="form-control" id="inputCity" name="inputCity">
+                            <div class="invalid-feedback" id="errorCity"></div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="inputZip">Codi Postal</label>
+                            <input type="text" class="form-control" id="inputZip" name="inputZip">
+                            <div class="invalid-feedback" id="errorZip"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8 mb-3 py-3 d-flex align-items-center">
+                            <input class="form-check-input my-0 mx-1" type="checkbox" id="gridCheck" name="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                <p class="my-0 mx-1">He llegit i acepto la politica de privacitat</p>
+                            </label>
+                            <div class="invalid-feedback" id="errorCheck"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-primary">Registre</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- JQuery Validate plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- Custom script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
