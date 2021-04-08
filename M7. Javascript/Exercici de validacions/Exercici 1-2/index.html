@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici de validacions (M7)</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container p-4">
+        <h1 class="display-5">Ejercicio de validación de formulario</h1>
+        <div class="row">
+            <div class="col-8">
+                <form class="form" id="form">
+                    <div class="row g-4 py-3">
+                        <div class="col-sm-8" id="nameDiv">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" class="form-control" name="fullName" placeholder="" id="inputName"
+                                aria-label="Full name">
+                            <p class="text-danger warning warning_inputName">El nombre es requerido, y no debe contener
+                                caracteres inválidos.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 py-3">
+                        <div class="col-sm-8">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="inputEmail">
+                            <p class="text-danger warning warning_inputEmail">El email es requerido, y no debe contener
+                                caracteres inválidos.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 py-3">
+                        <div class="col-sm-4">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" name="pwd" id="inputPassword">
+                            <p class="text-danger warning warning_inputPassword">La contraseña debe tener mínimo 8
+                                caracteres, una mayúscula y un número</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="password">Confirma la contraseña</label>
+                            <input type="password" class="form-control" name="pwdCheck" id="inputPasswordCheck">
+                            <p class="text-danger warning warning_inputPasswordCheck">Las contraseñas no coinciden</p>
+                        </div>
+                        <div class="col-sm-8 py-3 d-flex align-items-center">
+                            <input type="checkbox" onclick="pwdReveal()">
+                            <p class="my-0 mx-2">Mostrar contraseña</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <p class="fs-4 fw-bold text-success warning warning_sentSuccess py-3">Formulario enviado!</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- Custom script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
