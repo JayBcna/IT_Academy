@@ -17,7 +17,7 @@ const fields = {
     fullname: false,
     email: false,
     pwd: false,
-}
+};
 
 // Validación de formulario.
 const validacion = (e) => {
@@ -62,12 +62,12 @@ const validarPwd2 = () => {
     if (pwd1.value !== pwd2.value || pwd2.value.length == 0) {
         document.getElementById("inputPasswordCheck").classList.add("is-invalid");
         document.querySelector(".warning_inputPasswordCheck").style.display = "block";
-        fields['inputPassword'] = false;
+        fields["inputPassword"] = false;
     } else {
         document.getElementById("inputPasswordCheck").classList.add("is-valid");
         document.getElementById("inputPasswordCheck").classList.remove("is-invalid");
         document.querySelector(".warning_inputPasswordCheck").style.display = "none";
-        fields['inputPassword'] = true;
+        fields["inputPassword"] = true;
     }
 };
 
@@ -95,16 +95,16 @@ input.forEach((inpt) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (fields.fullname && fields.email && fields.pwd) {
-        
-        console.log("You're doin'it wrong...");
+    if (fields.fullname || fields.fullname == "") {
+        document.querySelector(".warning_sentFail").style.display = "block";
+        setTimeout(() => {
+            document.querySelector(".warning_sentFail").style.display = "none";
+        }, 3500);
     } else {
         form.reset();
         document.querySelector(".warning_sentSuccess").style.display = "block";
-        console.log("Noooice");
         setTimeout(() => {
-        document.querySelector(".warning_sentSuccess").style.display = "none";
-
-        },3500)
+            document.querySelector(".warning_sentSuccess").style.display = "none";
+        }, 3500);
     }
 });
