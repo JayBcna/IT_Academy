@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>TypeScript Exercise 1</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Ejercicio Vehículos - Nivel 1</h1>
+
+        <!-- CARS -->
+        <form class="form form-car" id="form-car">
+            <div class="form-row d-flex">
+                <div class="form-group col-md-3">
+                    <label for="plateInput" class="form-label">Plate</label>
+                    <input type="text" class="form-control" id="plateInput" aria-describedby="plateInput" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="brandInput" class="form-label">Brand</label>
+                    <input type="text" class="form-control" id="brandInput" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="brandColor" class="form-label">Color</label>
+                    <input type="text" class="form-control" id="colorInput" required>
+                </div>
+            </div>
+            <div class="form-row d-flex my-2">
+                <p id="carInfo"></p>
+                <button type="submit" class="btn btn-primary btn-car my-2" onclick="">Create car</button>
+                <!-- <button type="submit" class="btn btn-primary btn-car my-2" onclick="createCar()">Create car</button> -->
+                <!-- <button class="btn btn-primary btn-car my-2" onclick="createCar('1212SDS','SEAT','ROJO')">Create car</button> -->
+            </div>
+        </form>
+
+        <!-- WHEELS -->
+        <form class="form form-wheels" id="form-wheels">
+            <div class="form-row d-flex">
+                <div class="form-group col-md-3">
+                    <label for="bnd_wheel_1" class="form-label">Brand wheel 1</label>
+                    <input type="text" class="form-control bnd_wheel" id="bnd_wheel_1" aria-describedby="plateInput" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="diam_wheel_1" class="form-label">⌀ wheel 1</label>
+                    <input type="number" range min=0.4 max=2 step=0.1 class="form-control" id="diam_wheel_1" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="bnd_wheel_2" class="form-label">Brand wheel 2</label>
+                    <input type="text" class="form-control bnd_wheel" id="bnd_wheel_2" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="diam_wheel_2" class="form-label">⌀ wheel 2</label>
+                    <input type="number" range min=0.4 max=2 step=0.1 class="form-control" id="diam_wheel_2" required>
+                </div>
+            </div>
+            <div class="form-row d-flex mt-2">
+                <div class="form-group col-md-3">
+                    <label for="bnd_wheel_3" class="form-label">Brand wheel 3</label>
+                    <input type="text" class="form-control bnd_wheel" id="bnd_wheel_3" aria-describedby="plateInput" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="diam_wheel_3" class="form-label">⌀ wheel 3</label>
+                    <input type="number" range min=0.4 max=2 step=0.1 class="form-control" id="diam_wheel_3" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="bnd_wheel_4" class="form-label">Brand wheel 4</label>
+                    <input type="text" class="form-control bnd_wheel" id="bnd_wheel_4" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="diam_wheel_4" class="form-label">⌀ wheel 4</label>
+                    <input type="number" range min=0.4 max=2 step=0.1 class="form-control" id="diam_wheel_4" required>
+                </div>
+            </div>
+            <div class="form-row d-flex my-2">
+                <p id="wheelsInfo"></p>
+                <button type="submit" class="btn btn-primary btn-wheels my-2" onclick="">Add wheels</button>
+            </div>
+
+
+            <!-- RESET -->
+            <!-- <div class="form-row d-flex my-2">
+                <button onClick="window.location.reload()" class="btn btn-warning btn-car my-2">Reset</button>
+            </div> -->
+        </form>
+
+        <!-- CAR CARDS -->
+        <section class="container px-0 my-3 card-wrapper" id="card-wrapper">
+            <div class="card rounded">
+                <div class="card-header">
+                    <h4 class="card-title" id="titleCard">
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted" id="brandColorCard"></h6>
+                </div>
+                <div class="card-body row">
+                    <h5 class="card-title" id="wheelsTitleCard">Wheels</h5>
+                    <div class="col-9" id="detailBrandCard">
+                        <p class="card-text" id="wBrandCard_1"></p>
+                        <p class="card-text" id="wBrandCard_2"></p>
+                        <p class="card-text" id="wBrandCard_3"></p>
+                        <p class="card-text" id="wBrandCard_4"></p>
+
+                        <!--    Brand #1: Pirelli
+                                ⌀: 1,8              -->
+
+                    </div>
+                    <div class="col-3" id="detailDiamCard">
+                        <p class="card-text" id="wDiamCard_1"></p>
+                        <p class="card-text" id="wDiamCard_2"></p>
+                        <p class="card-text" id="wDiamCard_3"></p>
+                        <p class="card-text" id="wDiamCard_4"></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Scripts -->
+    <script src="../models/car.js"></script>
+    <script src="../models/wheel.js"></script>
+    <script src="../controllers/controller.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

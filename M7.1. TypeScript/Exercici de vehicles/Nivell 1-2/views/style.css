@@ -1,0 +1,23 @@
+.form-car {
+    display: block;
+}
+
+.form-wheels {
+    display: none;
+}
+
+.form-group {
+    margin-right: 0.5rem;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card p {
+    margin-bottom: 0.1rem;
+}
+
+.card-wrapper {
+    display: none;
+}
