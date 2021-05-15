@@ -67,9 +67,6 @@ form_car.addEventListener("submit", (e: Event) => {
         showCard();
         alert('Please insert the wheels info')
     }
-
-    console.log(cars[cars.length - 1])
-
 });
 
 // Retrieve WHEELS form data
