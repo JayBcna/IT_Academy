@@ -24,7 +24,7 @@ const diam_wheel_3 = document.getElementById("diam_wheel_3") as HTMLInputElement
 const diam_wheel_4 = document.getElementById("diam_wheel_4") as HTMLInputElement;
 
 // METHODS
-function createCar(plate: string, brand: string, color: string) {
+function createCar(plate: string, brand: string, color: string): void {
     car = new Car(plate, color, brand);
     cars.push(car)
 
@@ -38,7 +38,7 @@ function createCar(plate: string, brand: string, color: string) {
 }
 
 // Forms
-function showCard() {
+function showCard(): void {
     // @ts-ignore: Object is possibly 'null'.
     document.getElementById("form-car").style.display = "none";
     // @ts-ignore: Object is possibly 'null'.
@@ -66,9 +66,6 @@ form_car.addEventListener("submit", (e: Event) => {
         showCard();
         alert('Please insert the wheels info')
     }
-
-    console.log(cars[cars.length - 1])
-
 });
     
 // Retrieve WHEELS form data
