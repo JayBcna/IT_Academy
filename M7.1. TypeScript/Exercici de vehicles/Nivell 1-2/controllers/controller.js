@@ -2,6 +2,7 @@
 var car;
 var cars = [];
 var wheels = [];
+/* @ts-ignore */
 // Check plate with RegEx
 var checkPlate = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}/g;
 // INPUTS
@@ -85,7 +86,7 @@ form_wheels.addEventListener("submit", function (e) {
     }
     else {
         newCar.addWheel(new Wheel(diam_wheel_1.valueAsNumber, bnd_wheel_1.value));
-        console.log("sizes OK!");
+        console.log("Wheels size OK!");
         for (var i = 1; i < 5; i++) {
             // @ts-ignore: Object is possibly 'null'.
             prefixBrand.innerHTML += "Brand #" + i + ": " + bnd + "<br>";

@@ -1,6 +1,7 @@
 let car: Car;
 let cars: Car[] = [];
 let wheels: Wheel[] = [];
+/* @ts-ignore */
 
 // Check plate with RegEx
 const checkPlate = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}/g
@@ -8,7 +9,7 @@ const checkPlate = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}/g
 // INPUTS
 // Form
 const form_car = document.querySelector('.form-car') as HTMLFormElement;
-const form_wheels  = document.querySelector('.form-wheels') as HTMLFormElement;
+const form_wheels = document.querySelector('.form-wheels') as HTMLFormElement;
 // Car
 const xPlate = document.getElementById("plateInput") as HTMLInputElement;
 const xBrand = document.getElementById("brandInput") as HTMLInputElement;
@@ -24,7 +25,7 @@ const diam_wheel_3 = document.getElementById("diam_wheel_3") as HTMLInputElement
 const diam_wheel_4 = document.getElementById("diam_wheel_4") as HTMLInputElement;
 
 // METHODS
-function createCar(plate: string, brand: string, color: string) {
+function createCar(plate: string, brand: string, color: string): void {
     car = new Car(plate, color, brand);
     cars.push(car)
 
@@ -38,7 +39,7 @@ function createCar(plate: string, brand: string, color: string) {
 }
 
 // Forms
-function showCard() {
+function showCard(): void {
     // @ts-ignore: Object is possibly 'null'.
     document.getElementById("form-car").style.display = "none";
     // @ts-ignore: Object is possibly 'null'.
@@ -50,17 +51,17 @@ function showCard() {
 // Retrieve CAR form data
 form_car.addEventListener("submit", (e: Event) => {
     e.preventDefault();
-    
+
     // Check the plate with a RegExp
     if (!checkPlate.test(xPlate.value) || xPlate.value === "") {
         // @ts-ignore: Object is possibly 'null'.
         document.getElementById("plateInput").className =
-        "form-control is-invalid";
+            "form-control is-invalid";
         alert("Please insert a valid plate")
     } else {
         // @ts-ignore: Object is possibly 'null'.
         document.getElementById("plateInput").className =
-        "form-control is-valid";
+            "form-control is-valid";
         // If values OK, it creates a new 'car'
         createCar(xPlate.value, xBrand.value, xColor.value);
         showCard();
@@ -70,7 +71,7 @@ form_car.addEventListener("submit", (e: Event) => {
     console.log(cars[cars.length - 1])
 
 });
-    
+
 // Retrieve WHEELS form data
 form_wheels.addEventListener("submit", (e: Event) => {
     e.preventDefault();
@@ -95,8 +96,8 @@ form_wheels.addEventListener("submit", (e: Event) => {
     if (wheelsCondArray.indexOf(false) !== -1) {
         alert("sizes do not match...")
     } else {
-        newCar.addWheel(new Wheel(diam_wheel_1.valueAsNumber , bnd_wheel_1.value))
-        console.log("sizes OK!")
+        newCar.addWheel(new Wheel(diam_wheel_1.valueAsNumber, bnd_wheel_1.value))
+        console.log("Wheels size OK!")
         for (let i = 1; i < 5; i++) {
             // @ts-ignore: Object is possibly 'null'.
             prefixBrand.innerHTML += "Brand #" + i + ": " + bnd + "<br>";
