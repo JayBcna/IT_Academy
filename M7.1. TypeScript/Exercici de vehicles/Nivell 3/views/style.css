@@ -1,0 +1,66 @@
+.main {
+    right: 0;
+    left: 0;
+}
+
+.form-group {
+    margin-right: 0.5rem;
+}
+
+.card {
+    width: 18rem;
+    margin-right: 1rem;
+}
+
+.card:hover {
+    -webkit-box-shadow: 3px 7px 5px #8888887e;
+            box-shadow: 3px 7px 5px #8888887e;
+    -webkit-transition: -webkit-box-shadow 0.2s;
+    transition: -webkit-box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card p {
+    margin-bottom: 0.1rem;
+}
+
+.card-wrapper {
+    display: none;
+}
+
+.deleteIcon {
+    color: rgb(191, 5, 5);
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.5em;
+}
+
+.editIcon {
+    color: rgb(28, 97, 165);
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.5em;
+}
+
+.alert {
+    -webkit-box-shadow: 3px 7px 5px #8888882a;
+            box-shadow: 3px 7px 5px #8888882a;
+    position: relative;
+    z-index: 999999;
+    text-align: center;
+    width: 20rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
