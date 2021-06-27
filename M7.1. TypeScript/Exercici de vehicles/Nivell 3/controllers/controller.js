@@ -159,9 +159,6 @@ form_wheels.addEventListener("submit", (e) => {
     const newUI = new UI();
     // Retrieve the last car added
     let newCar = cars[cars.length - 1];
-    // const wContainer = <HTMLElement>document.querySelector('.card-body');
-    const wBrand = document.getElementById('detailBrandCard');
-    const wDiam = document.getElementById('detailDiamCard');
     // Array with conditions to check -wheels
     const wheelsCondArray = [
         diam_wheel_1.valueAsNumber == diam_wheel_2.valueAsNumber,
