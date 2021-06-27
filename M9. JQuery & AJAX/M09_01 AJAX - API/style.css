@@ -1,0 +1,14 @@
+.container {
+    margin-top: 2rem;
+}
+
+.card {
+    width: 18rem;
+    height: 30rem;
+}
+
+.card-footer {
+    background: white;
+    height: 4rem;
+    
+}
